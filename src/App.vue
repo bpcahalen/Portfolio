@@ -1,23 +1,22 @@
 <template>
   <div class="welcome" v-if="enter">
-    <button @click="enterSite">Enter</button>
+    <h1 class="welcomeMessage">Welcome To My Portfolio</h1>
+    <button class="enter" @click="enterSite">Enter</button>
   </div>
-  <div class="main" v-else>
+<div class="main" v-else> 
   <header>
     <div class="navigation">
       <h2 class="name">Barrett Cahalen</h2>
-      <div class="menu">
+      <nav class="menu">
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
         <router-link to="/projects">Projects</router-link>
         <router-link to="/contactme">Contact Me</router-link>
-      </div>
+      </nav>
     </div>
   </header>
-  <div>
-    <RouterView />
-  </div>
 </div>
+<div><RouterView/></div>
 </template>
 
 <script>
@@ -39,12 +38,54 @@ export default {
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@1,500&display=swap');
 
 .welcome{
   background : black;
   height: 100vh;
   width: 100vw;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter{
+  color: white;
+  background-color: black;
+  font-size:250%;
+  font-family: "Lora", serif;
+  border: none;
+}
+
+.enter:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.welcomeMessage{
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15px solid white;
+  cursor:default;
+  color: wheat;
+  font-size: 800%;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-bottom:30px;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing{
+  from {width: 0}
+  to {width: 90%}
+}
+
+@keyframes blink-caret{
+  from, to {border-color: transparent}
+  50% {border-color: white;}
 }
 
 html, body{
