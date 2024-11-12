@@ -12,5 +12,6 @@
 h1{
   color: white;
   margin: 0;
+  color: black;
 }
 </style>

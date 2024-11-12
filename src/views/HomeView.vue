@@ -1,7 +1,8 @@
 <template >
-  <main class="home">
+  <div class="home">
     <h1>This is the home page</h1>
-  </main>
+  </div>
+    
 </template>
 
 <script>
@@ -9,12 +10,10 @@
 </script>
 
 <style scoped>
-.home{
-  
-}
 
 h1{
   margin: 0;
-  color: white;
+  color: black;
+  font-family: "Lora", serif;
 }
 </style>
