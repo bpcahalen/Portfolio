@@ -3,7 +3,7 @@
     <h1 class="welcomeMessage">Welcome To My Portfolio</h1>
     <button class="enter" @click="enterSite">Enter</button>
   </div>
-<div class="main" v-else> 
+<div v-if="!enter"> 
   <header>
     <div class="navigation">
       <h2 class="name">Barrett Cahalen</h2>
@@ -15,8 +15,8 @@
       </nav>
     </div>
   </header>
+  <RouterView/>
 </div>
-<div><RouterView/></div>
 </template>
 
 <script>
@@ -28,7 +28,11 @@ export default {
   }, 
   methods: {
     enterSite() {
-      this.enter = false;
+      if(this.enter){
+        this.enter = false;
+      }else{
+        this.enter = true;
+      }
     }
   }
 }
@@ -48,6 +52,21 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+}
+
+.enter{
+  animation: transitionOut 2s;
+}
+
+@keyframes transitionOut{
+  from {
+    transform: translateY(0);
+  }
+
+  to{
+    transform: translateY(-100%);
+  }
 }
 
 .enter{
@@ -96,12 +115,14 @@ html, body{
 }
 
 header{
+  margin: 0;
   background-color: #7d0b0b;
+  border-bottom: black 8px solid;
 }
 
 .navigation{
   display: flex;
-  margin: 5px 15px 5px 15px;
+  margin: 0 15px 0 15px;
   justify-content: space-between;
   align-items: center;
 }

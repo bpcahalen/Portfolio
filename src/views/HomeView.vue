@@ -11,6 +11,11 @@
 
 <style scoped>
 
+.home{
+  background-color: wheat;
+  height:100vh
+}
+
 h1{
   margin: 0;
   color: black;
