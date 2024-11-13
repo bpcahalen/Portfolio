@@ -12,7 +12,7 @@
 <style scoped>
 
 .home{
-  background-color: wheat;
+  /* background-color: black; */
   height:100vh
 }
 

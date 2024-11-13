@@ -9,13 +9,18 @@
       <h2 class="name">Barrett Cahalen</h2>
       <nav class="menu">
         <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
+        <!-- <router-link to="/about">About</router-link> -->
         <router-link to="/projects">Projects</router-link>
         <router-link to="/contactme">Contact Me</router-link>
       </nav>
     </div>
   </header>
   <RouterView/>
+  <footer>
+    <a class="link">LinkedIn</a>
+    <a class="link">GitHub</a>
+    <router-link to="/contactme" class="link">Resume</router-link>
+  </footer>
 </div>
 </template>
 
@@ -55,9 +60,9 @@ export default {
   margin: 0;
 }
 
-.enter{
+/* .enter{
   animation: transitionOut 2s;
-}
+} */
 
 @keyframes transitionOut{
   from {
@@ -107,7 +112,7 @@ export default {
   50% {border-color: white;}
 }
 
-html, body{
+html, body, RouterView{
   overflow-x: hidden;
   margin: 0;
   height: 100vh;
@@ -117,7 +122,7 @@ html, body{
 header{
   margin: 0;
   background-color: #7d0b0b;
-  border-bottom: black 8px solid;
+  border-bottom: black 4px solid;
 }
 
 .navigation{
@@ -134,9 +139,10 @@ header{
   align-items: center;
 }
 
-h2{
+.name{
   color: wheat;
   font-family: "Lora", serif;
+  cursor: default;
 }
 
 a {
@@ -149,5 +155,19 @@ a {
 a:hover{
   text-decoration: underline solid;
   color: white;
+}
+
+footer{
+  margin: 0;
+  background-color: #7d0b0b;
+  border-top: black 4px solid;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.link{
+  cursor: pointer;
 }
 </style>
