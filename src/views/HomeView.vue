@@ -13,7 +13,7 @@
 
 .home{
   /* background-color: black; */
-  height:100vh
+  height:100%;
 }
 
 h1{
@@ -21,4 +21,6 @@ h1{
   color: black;
   font-family: "Lora", serif;
 }
+
+
 </style>

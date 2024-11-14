@@ -112,7 +112,7 @@ export default {
   50% {border-color: white;}
 }
 
-html, body, RouterView{
+html, body{
   overflow-x: hidden;
   margin: 0;
   height: 100vh;
@@ -123,6 +123,7 @@ header{
   margin: 0;
   background-color: #7d0b0b;
   border-bottom: black 4px solid;
+  height: 60px;
 }
 
 .navigation{
