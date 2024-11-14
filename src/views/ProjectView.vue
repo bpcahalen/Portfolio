@@ -28,7 +28,7 @@
                 <div class="image-link">
                     <img class="tenmo" src="../images/tenMo.png" />
                     <span class="projectLink">Find it here: <a
-                            class="projectLink2" target="_blank">https://playbillmemory.netlify.app</a></span>
+                            class="projectLink2" href="https://github.com/bpcahalen/TEnmo-Service" target="_blank">https://playbillmemory.netlify.app</a></span>
                 </div>
             </div>
             <div class="project3">
