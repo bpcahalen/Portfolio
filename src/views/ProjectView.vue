@@ -1,33 +1,51 @@
 <template>
-<div class="project">
-    <h1 class="projectTitle">Projects</h1>
-    <p class="projectWelcome">Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti natoque vestibulum aliquet inceptos cras class taciti. Egestas platea in pulvinar phasellus turpis?</p>
-    <div class="projects">
-        <div class="project1">
-            <div class="image-link">
-            <img class="playbill" src="../images/playbillMemoryGame.png"/>
-            <span class="projectLink">Find it here: <a class="projectLink2">https://playbillmemory.netlify.app</a></span>
+    <div class="project">
+        <h1 class="projectTitle">Projects</h1>
+        <h2 class="projectWelcome">Welcome to my projects page!</h2>
+        <h3 class="projectWelcome2">Here you can see a few examples of projects I've created or co-created along with
+            the use of languages such as: <br> Java, SQL, HTML, CSS, JS, and Vue.</h3>
+        <div class="projects">
+            <div class="project1">
+                <div class="image-link">
+                    <img class="playbill" src="../images/playbillMemoryGame.png" />
+                    <span class="projectLink">Find it here: <a
+                            class="projectLink2" href="https://playbillmemory.netlify.app" target="_blank">https://playbillmemory.netlify.app</a></span>
+                </div>
+                <div class="playbillDef">
+                    <h4>Memory Game</h4>
+                    <p>Created a front end memory game that utilizes JavaScript, FetchAPI, andFisher-Yates shuffling
+                        method. The application is able to keep score, lock out when cards match, and even allow for an
+                        extra hard challenge with hardcore mode.</p>
+                </div>
             </div>
-            <p class="playbillDef">Lorem ipsum odor amet, consectetuer adipiscing elit. Finibus iaculis sapien; libero tortor id imperdiet penatibus eleifend. Nascetur libero neque etiam, tempor per rhoncus. Est pharetra penatibus rutrum bibendum felis; bibendum eleifend. Feugiat efficitur parturient fusce magna; eros quisque. Suspendisse himenaeos adipiscing non felis suspendisse varius interdum. Neque sollicitudin tristique integer, lacinia non tincidunt. Augue finibus metus tempus mus accumsan cursus.</p>
-        </div>
-        <div class="project2">
-            <p class="tenmoDef">Lorem ipsum odor amet, consectetuer adipiscing elit. Finibus iaculis sapien; libero tortor id imperdiet penatibus eleifend. Nascetur libero neque etiam, tempor per rhoncus. Est pharetra penatibus rutrum bibendum felis; bibendum eleifend. Feugiat efficitur parturient fusce magna; eros quisque. Suspendisse himenaeos adipiscing non felis suspendisse varius interdum. Neque sollicitudin tristique integer, lacinia non tincidunt. Augue finibus metus tempus mus accumsan cursus.</p>
-            <div class="image-link">
-                <img class="tenmo" src="../images/tenMo.png"/>
-                <span class="projectLink">Find it here: <a class="projectLink2">https://playbillmemory.netlify.app</a></span>
+            <div class="project2">
+                <div class="tenmoDef">
+                    <h4>TenMo Money Transfer System</h4>
+                    <p>Co-created a command line and RESTful API server for a money transfer program using SQL, JDBC
+                        framework, and HTTP protocol. Capabilities include user registration, login, money transfer,
+                        transfer tracking, and logout.</p>
+                </div>
+                <div class="image-link">
+                    <img class="tenmo" src="../images/tenMo.png" />
+                    <span class="projectLink">Find it here: <a
+                            class="projectLink2" target="_blank">https://playbillmemory.netlify.app</a></span>
+                </div>
+            </div>
+            <div class="project3">
+                <div class="image-link">
+                    <img class="worldByte" src="../images/worldBytes.png" />
+                    <span class="projectLink">Find it here: <a
+                            class="projectLink2" target="_blank">https://playbillmemory.netlify.app</a></span>
+                </div>
+                <div class="worldByteDef">
+                    <h4>WorldBytes: Meal Planning Site</h4>
+                    <p> Built within 2 weeks using Java, JDBC, RESTful API design, and Vue.js. Features include user
+                        registration, login, recipe finding, and personal account management.</p>
+                </div>
             </div>
         </div>
-        <div class="project3">
-            <div class="image-link">
-            <img class="worldByte" src="../images/worldBytes.png"/>
-            <span class="projectLink">Find it here: <a class="projectLink2">https://playbillmemory.netlify.app</a></span>
-            </div>
-            <p class="worldByteDef">Lorem ipsum odor amet, consectetuer adipiscing elit. Finibus iaculis sapien; libero tortor id imperdiet penatibus eleifend. Nascetur libero neque etiam, tempor per rhoncus. Est pharetra penatibus rutrum bibendum felis; bibendum eleifend. Feugiat efficitur parturient fusce magna; eros quisque. Suspendisse himenaeos adipiscing non felis suspendisse varius interdum. Neque sollicitudin tristique integer, lacinia non tincidunt. Augue finibus metus tempus mus accumsan cursus.</p>
-            
-        </div>
+
     </div>
-   
-</div>
 </template>
 
 <script>
@@ -35,129 +53,142 @@
 </script>
 
 <style>
-.project{
+.project {
     height: 100%;
     padding: 20px 0 40px 0;
-    /* background-color: black; */
+    background-color: black;
     cursor: default;
+    color: white;
 }
 
-.projectTitle{
+.projectTitle {
     text-align: center;
     font-family: "Lora", serif;
     font-size: 500%;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    color: white;
 }
 
-.projectWelcome{
+.projectWelcome {
     text-align: center;
     font-family: "Lora", serif;
-    
+    font-weight: bold;
 }
 
-.projects{
+.projectWelcome2 {
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 100%;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.projects {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "project1"
-    "project2"
-    "project3";
-     margin-top: 30px;
+    grid-template-areas:
+        "project1"
+        "project2"
+        "project3";
+    margin-top: 30px;
 }
 
-.project1{
+.project1 {
     grid-area: project1;
     display: grid;
     grid-template-columns: 1fr 1.75fr;
-    grid-template-areas: 
-    "playbill playbillDef";
+    grid-template-areas:
+        "playbill playbillDef";
     align-items: center;
     font-family: "Lora", serif;
 }
 
-.project2{
+.project2 {
     grid-area: project2;
     display: grid;
     grid-template-columns: 1.75fr 1fr;
-    grid-template-areas: 
-    "tenmoDef tenmo";
+    grid-template-areas:
+        "tenmoDef tenmo";
     align-items: center;
     font-family: "Lora", serif;
     margin-left: 20px;
 }
 
-.project3{
+.project3 {
     grid-area: project3;
     display: grid;
     grid-template-columns: 1fr 1.75fr;
-    grid-template-areas: 
-    "worldByte worldByteDef";
+    grid-template-areas:
+        "worldByte worldByteDef";
     align-items: center;
     font-family: "Lora", serif;
 }
 
-.image-link{
+.image-link {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.projectLink{
+.projectLink {
     color: black;
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
+    color: white;
+    behavior: ;
 }
 
-.projectLink2{
+.projectLink2 {
     color: black;
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
+    color: white;
 }
 
-.projectLink2:hover{
-    color: black;
-    text-decoration: underline;
+.projectLink2:hover {
+    color: wheat;
+    text-decoration: underline wheat;
     cursor: pointer;
 }
 
-.playbill{
+.playbill {
     grid-area: playbill;
     width: 400px;
     height: 325px;
     margin: 5px;
 }
 
-.playbillDef{
+.playbillDef {
     grid-area: playbillDef;
     font-size: 135%;
 }
 
-.tenmo{
+.tenmo {
     grid-area: tenmo;
     width: 400px;
     height: 325px;
     margin: 5px;
 }
 
-.tenmoDef{
+.tenmoDef {
     grid-area: tenmoDef;
     font-size: 135%;
 }
 
 
-.worldByte{
+.worldByte {
     width: 400px;
     height: 325px;
     grid-area: worldByte;
     margin: 5px;
 }
 
-.worldByteDef{
+.worldByteDef {
     grid-area: worldByteDef;
     font-size: 135%;
 }
-
-
 </style>
