@@ -28,7 +28,7 @@
                 <div class="image-link">
                     <img class="tenmo" src="../images/tenMo.png" />
                     <span class="projectLink">Find it here: <a
-                            class="projectLink2" href="https://github.com/bpcahalen/TEnmo-Service" target="_blank">https://playbillmemory.netlify.app</a></span>
+                            class="projectLink2-1" href="https://github.com/bpcahalen/TEnmo-Service" target="_blank">https://github.com/bpcahalen/TEnmo-Service</a></span>
                 </div>
             </div>
             <div class="project3">
@@ -138,7 +138,6 @@
     font-family: "Lora", serif;
     font-weight: bold;
     color: white;
-    behavior: ;
 }
 
 .projectLink2 {
@@ -149,7 +148,21 @@
     color: white;
 }
 
+.projectLink2-1 {
+    color: black;
+    font-size: small;
+    font-family: "Lora", serif;
+    font-weight: bold;
+    color: white;
+}
+
 .projectLink2:hover {
+    color: wheat;
+    text-decoration: underline wheat;
+    cursor: pointer;
+}
+
+.projectLink2-1:hover {
     color: wheat;
     text-decoration: underline wheat;
     cursor: pointer;
