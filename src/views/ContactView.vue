@@ -1,8 +1,18 @@
 <template>
     <div class="contactPage">
-       <div class="downloads"></div> 
+       <div class="downloads">
+        <div class="resume">
+            <h2 class="resTitle">Resume</h2>
+            <img src="../documents/Barrett_Cahalen_Resume.png" class='resAdjust'/><br>
+            <img src="../documents/Barrett_Cahalen_Resume.png" id="resume" hidden></img>
+            <button @click="exportToPdf">Download My Resume</button>
+        </div>
+        <div class="certificates">
+            
+        </div>
+       </div> 
 
-        <h1></h1>
+        <h1>Contact Me</h1>
         <form class="form">
             <label for="fullName" class="name">Full Name: </label>
             <input type="text" name="fullName" placeholder="Full name..."><br>
@@ -73,7 +83,17 @@
 </template>
 
 <script>
+import html2pdf from 'html2pdf.js';
 
+export default{
+    methods:{
+        exportToPdf(){
+            html2pdf(document.getElementById('resume'), {
+                filename: "Barrett Cahalen Resume.pdf"
+            })
+        }
+    }
+}
 </script>
 
 <style>
@@ -83,5 +103,34 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.downloads{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resTitle{
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+}
+
+#resume{
+    height: 295mm;
+    width: 210mm;
+}
+
+.resAdjust{
+    height: 380px;
+    width: 293px;
+    border: black solid 3px;
 }
 </style>
