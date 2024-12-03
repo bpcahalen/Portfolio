@@ -126,6 +126,7 @@ export default {
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   margin: 0;
   height: 100vh;
   width: 100vw;
