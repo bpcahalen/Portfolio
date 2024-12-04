@@ -1,6 +1,15 @@
 <template >
   <div class="home">
-    <h1>This is the home page</h1>
+    <div class="introPart">
+      <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
+      <img src="../images/businessPhoto.jpg" class="headshot1">
+      <p class="intro"> I want to start by thanking you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. While you're here you'll 
+      get to learn all about my journey into the techn world from being a professional dancer. You'll see some projects I've had the pleasure of working on either solo or with a team. 
+      And if you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. I think that's about all that I've got to say, so without 
+      further ado, I'd like to introduce myself a little more...
+      </p>
+    </div>
+
     <div class="certificates">
             <h2>Certifications</h2>
             <div class="certSlide">
@@ -55,14 +64,39 @@
 <style scoped>
 
 .home{
-  /* background-color: black; */
+  background-image: url("../images/tan3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height:100%;
 }
 
-h1{
+.introPart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro{
   margin: 0;
+  padding: 20px;
+  font-size: larger;
+  font-family: "Lora", serif;
+  text-indent: 70px;
+}
+
+.introName{
+  margin: 0;
+  padding: 20px 0 0 0;
   color: black;
   font-family: "Lora", serif;
+  font-size: 55px;
+}
+
+.headshot1{
+  width: 300px;
+  height: 300px;
 }
 
 @keyframes slide{

@@ -24,8 +24,8 @@ export default{
 <style>
 
 .projects{
-    color: white;
-    margin: 30px;
+    color: navy;
+    margin: 40px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +36,7 @@ export default{
 .projectName{
     text-decoration: underline solid 3px;
     font-size: 50px;
+    margin: 15px 0;
 }
 
 .image-link {
@@ -51,24 +52,22 @@ export default{
 }
 
 .projectLink {
-    color: black;
+    color: navy;
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
-    color: white;
 }
 
 .projectLink2 {
-    color: black;
+    color: navy;
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
-    color: white;
 }
 
 .projectLink2:hover {
-    color: wheat;
-    text-decoration: underline wheat;
+    color: navy;
+    text-decoration: underline navy;
     cursor: pointer;
 }
 

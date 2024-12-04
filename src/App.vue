@@ -137,8 +137,8 @@ body {
 
 header {
   margin: 0;
-  background-color: #7d0b0b;
-  border-bottom: wheat 4px solid;
+  background-color: navy;
+  border-bottom: 	#505050 6px solid;
   height: 60px;
 }
 
@@ -157,13 +157,13 @@ header {
 }
 
 .name {
-  color: wheat;
+  color: white;
   font-family: "Lora", serif;
   cursor: default;
 }
 
 a {
-  color: wheat;
+  color: white;
   text-decoration: none;
   font-size: larger;
   font-family: "Lora", serif;
@@ -171,13 +171,13 @@ a {
 
 a:hover {
   text-decoration: underline solid;
-  color: white;
+  color: wheat;
 }
 
 footer{
   margin: 0;
-  background-color: #7d0b0b;
-  border-top: wheat 4px solid;
+  background-color: navy;
+  border-top: 	#505050 6px solid;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -190,8 +190,8 @@ footer{
 
 .resumeButton{
   border: none;
-  background-color: #7d0b0b;
-  color: wheat;
+  background-color: navy;
+  color: white;
   text-decoration: none;
   font-size: large;
   font-family: "Lora", serif;
@@ -200,6 +200,6 @@ footer{
 
 .resumeButton:hover{
   text-decoration: underline solid;
-  color: white;
+  color: wheat;
 }
 </style>

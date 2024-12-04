@@ -5,9 +5,9 @@
         <h3 class="projectWelcome2">Here you can see a few examples of projects I've created or co-created along with
             the use of languages or frameworks such as: <br> Java, SQL, HTML, CSS, JS, Spring, and Vue.js.</h3>
             <div class="quickAccess">
-                <a href="#1" id="project-1">Frontend Project: Memory Card Game</a>
-                <a href="#2" id="project-2">Backend Project: TenMo Service</a>
-                <a href="#3" id="project-3">Fullstack Project: World Byte Meal Planning Application</a>
+                <a href="#1" id="project-1" class="jump">Frontend Project: Memory Card Game</a>
+                <a href="#2" id="project-2" class="jump">Backend Project: TenMo Service</a>
+                <a href="#3" id="project-3" class="jump">Fullstack Project: World Byte Meal Planning Application</a>
             </div>
         <div>
             <project :projects="projects"/>
@@ -63,9 +63,12 @@ export default {
 .project {
     height: 100%;
     padding: 20px 0 40px 0;
-    background-color: black;
+    background-image: url("../images/tan3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: default;
-    color: white;
+    color: navy;
 }
 
 .projectTitle {
@@ -74,7 +77,7 @@ export default {
     font-size: 500%;
     margin-bottom: 15px;
     text-decoration: underline;
-    color: white;
+    color: navy;
 }
 
 .projectWelcome {
@@ -87,12 +90,25 @@ export default {
     text-align: center;
     font-family: "Lora", serif;
     font-size: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     font-weight: bold;
 }
 
 .quickAccess{
     scroll-behavior: smooth;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jump{
+    color: navy;
+    font-family: "Lora", serif;
+}
+
+.jump:hover{
+    color: navy;
+    text-decoration: underline navy;
 }
 
 /* .projects {
