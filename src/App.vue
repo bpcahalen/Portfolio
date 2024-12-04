@@ -14,7 +14,7 @@
           <!-- <router-link to="/about">About</router-link> -->
           <router-link to="/projects">Projects</router-link>
           <router-link to="/contactme">Contact Me</router-link>
-          <a href="../dist/Barrett Cahalen Resume.pdf" download>
+          <a href="../public/Barrett Cahalen Resume.pdf" download="Barrett_Cahalen_Resume.pdf">
                 <button class="resumeButton">Resume</button>
             </a>
         </nav>
