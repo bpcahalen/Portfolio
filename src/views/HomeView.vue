@@ -68,9 +68,9 @@
 </template>
 
 <script>
-import AWS from '../../AWS Certified Cloud Practitioner certificate.pdf';
-import TE from "../../Barrett-Cahalen-graduation-certificate.pdf";
-import IT from "../../Coursera LHS5B98WGRQG.pdf";
+import AWS from '../../public/AWS Certified Cloud Practitioner certificate.pdf';
+import TE from "../../public/Barrett-Cahalen-graduation-certificate.pdf";
+import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 
 </script>
 

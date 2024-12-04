@@ -29,7 +29,7 @@
 
 <script>
 import VuePdfViewer from "pdf-viewer-vue";
-import resume from "../BarrettCahalenResume.pdf";
+import resume from "../public/BarrettCahalenResume.pdf";
 
 export default {
   data() {
