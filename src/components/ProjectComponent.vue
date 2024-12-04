@@ -20,24 +20,30 @@
                         </tr>
                         <tr>
                             <td>{{ project.data4 }}</td>
-                            <td><ul>
+                            <td>
+                                <ul>
                                     <li>{{ project.data5 }}</li>
                                     <li>{{ project.data6 }}</li>
-                                </ul></td>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>{{ project.data7 }}</td>
-                            <td><ul>
+                            <td>
+                                <ul>
                                     <li>{{ project.data8 }}</li>
                                     <li>{{ project.data9 }}</li>
-                                </ul></td>
+                                </ul>
+                            </td>
                         </tr>
                         <tr>
                             <td>{{ project.data10 }}</td>
-                            <td><ul>
+                            <td>
+                                <ul>
                                     <li>{{ project.data11 }}</li>
                                     <li>{{ project.data12 }}</li>
-                                </ul></td>
+                                </ul>
+                            </td>
                         </tr>
                     </table>
                     <p class="demonstrates">{{ project.demonstrates }}</p>
