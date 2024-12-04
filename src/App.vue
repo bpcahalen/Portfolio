@@ -12,6 +12,9 @@
           <!-- <router-link to="/about">About</router-link> -->
           <router-link to="/projects">Projects</router-link>
           <router-link to="/contactme">Contact Me</router-link>
+          <a href="../../public/Barrett Cahalen Resume.pdf" download>
+                <button class="resumeButton">Resume</button>
+            </a>
         </nav>
       </div>
     </header>
@@ -19,7 +22,7 @@
     <footer>
       <a class="link">LinkedIn</a>
       <a class="link">GitHub</a>
-      <router-link to="/contactme" class="link">Resume</router-link>
+
     </footer>
   </div>
 </template>
@@ -171,7 +174,7 @@ a:hover {
   color: white;
 }
 
-footer {
+footer{
   margin: 0;
   background-color: #7d0b0b;
   border-top: wheat 4px solid;
@@ -183,5 +186,20 @@ footer {
 
 .link {
   cursor: pointer;
+}
+
+.resumeButton{
+  border: none;
+  background-color: #7d0b0b;
+  color: wheat;
+  text-decoration: none;
+  font-size: large;
+  font-family: "Lora", serif;
+  cursor: pointer;
+}
+
+.resumeButton:hover{
+  text-decoration: underline solid;
+  color: white;
 }
 </style>

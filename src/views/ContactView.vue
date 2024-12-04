@@ -1,20 +1,9 @@
 <template>
     <div class="contactPage">
-       <div class="downloads">
-        <div class="resume">
-            <h2 class="resTitle">Resume</h2>
-            <img src="../documents/Barrett_Cahalen_Resume.png" class='resAdjust'/><br>
-            <img src="../documents/Barrett_Cahalen_Resume.png" id="resume" hidden></img>
-            <button @click="exportToPdf">Download My Resume</button>
-        </div>
-        <div class="certificates">
-            
-        </div>
-       </div> 
-
-        <h1>Contact Me</h1>
+        <div class="contact">
+        <h1 class="contactMe">Contact Me</h1>
         <form class="form">
-            <label for="fullName" class="name">Full Name: </label>
+            <label for="fullName" class="fullName">Full Name: </label>
             <input type="text" name="fullName" placeholder="Full name..."><br>
 
             <label for="email" class="email">Email Address: </label>
@@ -80,38 +69,65 @@
             <textarea name="subject" id="subject" placeholder="Write something..."></textarea>
         </form>
     </div>
+        <!-- <div class="resume">
+            <h2 class="resTitle">Resume</h2>
+            <img src="../documentPhotos/Barrett_Cahalen_Resume.png" class='resAdjust'>
+            <a href="../../public/Barrett Cahalen Resume.pdf" download >
+                <button>Download Resume</button>
+            </a>
+        </div> -->
+
+    </div>
 </template>
 
 <script>
-import html2pdf from 'html2pdf.js';
-
-export default{
-    methods:{
-        exportToPdf(){
-            html2pdf(document.getElementById('resume'), {
-                filename: "Barrett Cahalen Resume.pdf"
-            })
-        }
-    }
-}
 </script>
 
 <style>
+
+.contactPage{
+    display: flex;
+    justify-content: center;
+}
 .form{
     border: solid black 5px;
+    background-color: aquamarine;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 600px;
+    padding: 40px;
 }
 
-.downloads{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+input{
+    height: 20px;
+    width: 200px;
+    background-color: grey;
+    color: white;
 }
 
-.resume{
+select{
+    background-color: grey;
+}
+
+textarea{
+    background-color: grey;
+    height: 100px;
+    width: 400px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.contactMe{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 50px;;
+}
+
+/* .resume{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,14 +139,9 @@ export default{
     margin: 20px 0 20px 0;
 }
 
-#resume{
-    height: 295mm;
-    width: 210mm;
-}
-
 .resAdjust{
     height: 380px;
     width: 293px;
     border: black solid 3px;
-}
+} */
 </style>
