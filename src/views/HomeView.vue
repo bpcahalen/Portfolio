@@ -25,19 +25,19 @@
             <div class="certSlide">
                 <div class="aws">
                     <h2 class="awsTitle">AWS Certification</h2>
-                    <a href="../../public/AWS Certified Cloud Practitioner certificate.pdf" download >
+                    <a href="../../AWS Certified Cloud Practitioner certificate.pdf" download >
                         <img src="../documentPhotos/AWS_Cert.png" class='awsAdjust'/>
                     </a>
                 </div>
                 <div class="te">
                     <h2 class="teTitle">Web Development Certification</h2>
-                    <a href="../../public/Barrett-Cahalen-graduation-certificate.pdf" download >
+                    <a href="../../Barrett-Cahalen-graduation-certificate.pdf" download >
                         <img src="../documentPhotos/TE_Cert.png" class='teAdjust'/>
                     </a>
                 </div>
                 <div class="it">
                     <h2 class="itTitle">Google IT Certification</h2>
-                    <a href="../../public/Coursera LHS5B98WGRQG.pdf" download >
+                    <a href="../../Coursera LHS5B98WGRQG.pdf" download >
                         <img src="../documentPhotos/IT_Cert.png" class='itAdjust'/>
                     </a>
                 </div>
@@ -68,9 +68,9 @@
 </template>
 
 <script>
-import AWS from '../../public/AWS Certified Cloud Practitioner certificate.pdf';
-import TE from "../../public/Barrett-Cahalen-graduation-certificate.pdf";
-import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
+import AWS from '../../AWS Certified Cloud Practitioner certificate.pdf';
+import TE from "../../Barrett-Cahalen-graduation-certificate.pdf";
+import IT from "../../Coursera LHS5B98WGRQG.pdf";
 
 </script>
 

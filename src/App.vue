@@ -13,7 +13,7 @@
           <router-link to="/">Home</router-link>
           <!-- <router-link to="/about">About</router-link> -->
           <router-link to="/projects">Projects</router-link>
-          <a role="button" href="../public/BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf">Resume</a>
+          <a role="button" href="../BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf">Resume</a>
           <router-link to="/contactme">Contact Me</router-link>
         </nav>
       </div>
@@ -29,7 +29,7 @@
 
 <script>
 import VuePdfViewer from "pdf-viewer-vue";
-import resume from "../public/BarrettCahalenResume.pdf";
+import resume from "../BarrettCahalenResume.pdf";
 
 export default {
   data() {
