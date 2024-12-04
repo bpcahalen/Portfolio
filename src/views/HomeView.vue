@@ -2,13 +2,8 @@
   <div class="home">
     <div class="introPart">
       <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
-      <img src="../images/businessPhoto.jpg" class="headshot1">
-      <p class="intro"> I want to start by thanking you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. 
-        <br>And if you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. 
-        <br>I think that's about all that I've got to say, so without further ado, I'd like to introduce myself a little more...
-      </p>
-    </div>
-    <div class="intoTech">
+      <img src="../images/businessPhoto2.jpg" class="headshot1">
+      <div class="intoTech">
       <p class="introPt2">
         Originally from California, I grew up being apart of the entertainment industry as a dancer, a passion that eventually led me to earn a Bachelor's degree in Dance Performance from Oklahoma City University. 
         After graduating, I joined Celebrity Cruise Line, where I eventually advanced to the role of dance captain/team lead, allowing me to hone my leadership, communication, and organizational skills in a fast-paced, dynamic environment.
@@ -19,6 +14,10 @@
         This newfound passion motivated me to attend Tech Elevator's intensive 14-week full-stack development program. 
         Here I learned quintessential programming skills as Java, SQL, HTML, CSS, JS, and much more. 
         After finishing the program I wanted to further expand my skill set and continued learning independently which is when I earned my AWS Cloud Practitioner certification, solidifying my commitment to building a career in tech.
+      </p>
+    </div>
+    <p class="intro"> I want to thank you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. 
+        <br>If you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. 
       </p>
     </div>
     <h2 class="certTitle">Here You Can See All My Certifications From Google, Tech Elevator, and AWS</h2>
@@ -103,7 +102,7 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 }
 
 .introName{
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 20px 0 0 0;
   color: black;
   font-family: "Lora", serif;

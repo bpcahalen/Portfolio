@@ -13,8 +13,8 @@
           <router-link to="/">Home</router-link>
           <!-- <router-link to="/about">About</router-link> -->
           <router-link to="/projects">Projects</router-link>
-          <router-link to="/contactme">Contact Me</router-link>
           <a role="button" href="../dist/Barrett Cahalen Resume.pdf" download>Resume</a>
+          <router-link to="/contactme">Contact Me</router-link>
         </nav>
       </div>
     </header>

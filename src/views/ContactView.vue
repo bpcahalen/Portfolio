@@ -8,7 +8,7 @@
             Feel free to reach out—I’d love to connect and explore how we can work together and what we might be able to build together!
         </p>
             <div class="formBody">
-                <img src="../images/businessPhoto2.jpg" class="headshot2">
+                <img src="../images/businessPhoto.jpg" class="headshot2">
             <form class="form">
                 <div class="fullName">
                 <label for="fullName">Full Name: </label>
