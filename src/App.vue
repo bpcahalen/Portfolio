@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import resume from "../public/Barrett Cahalen Resume.pdf";
+
 export default {
   data() {
     return {
