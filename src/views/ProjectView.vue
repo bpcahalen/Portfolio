@@ -144,13 +144,16 @@ export default {
 }
 
 .jump{
-    color: black;
+    color: white;
     font-family: "Lora", serif;
+    border: navy 2px solid;
+    background-color: navy;
+    padding: 5px;
 }
 
 .jump:hover{
-    color: black;
-    text-decoration: underline black;
+    color: white;
+    text-decoration: underline white;
 }
 
 /* .projects {
