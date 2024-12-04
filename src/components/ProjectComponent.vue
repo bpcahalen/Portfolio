@@ -42,7 +42,7 @@
                     </table>
                     <p class="demonstrates">{{ project.demonstrates }}</p>
                 </div>
-                <span class="projectLink">Find it here: <a
+                <span class="projectLink"> {{ project.find }} <a
                     class="projectLink2" :href="project.htmlUrl" target="_blank">{{ project.htmlUrl }}</a></span>
     </div>
 </template>

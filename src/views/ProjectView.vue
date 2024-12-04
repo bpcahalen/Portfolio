@@ -3,7 +3,7 @@
         <h1 class="projectTitle">Projects</h1>
         <h2 class="projectWelcome">Welcome to my projects page!</h2>
         <h3 class="projectWelcome2">Here you can see a few examples of projects I've created or co-created along with
-            the use of languages or frameworks such as: <br> Java, SQL, HTML, CSS, JS, Spring Boot, RESTful API's, and Vue.js.</h3>
+            the use of languages or frameworks such as: <br> Java, SQL, HTML, CSS, JS, Spring Boot, RESTful API's, JDBC, and Vue.js.</h3>
             <div class="quickAccess">
                 <a href="#1" id="project-1" class="jump">Frontend Project</a>
                 <a href="#2" id="project-2" class="jump">Backend Project</a>
@@ -47,6 +47,7 @@ export default {
                 data11: "Clean and intuitive UI with responsive styling for different screen sizes.",
                 data12: "Clear visual feedback for card matches and mismatches.",
                 demonstrates: "This project showcases strong JavaScript programming, creative problem-solving, and front-end development skills. It demonstrates proficiency in game logic design, user experience optimization, and efficient use of APIs for interactive features.",
+                find: "Find it here: ",
                 htmlUrl: "https://playbillmemory.netlify.app",
                 id: 1 
                 },
@@ -67,7 +68,8 @@ export default {
                 data11: "Robust and scalable backend architecture designed for reliability and security.",
                 data12: "Comprehensive error handling for common transaction and login issues.",
                 demonstrates: "This project demonstrates expertise in backend development, database design, RESTful API integration, and implementing secure and efficient financial operations in a real-world scenario.",
-                htmlUrl: "https://github.com/bpcahalen/TEnmo-Service",
+                find: "",
+                htmlUrl: "",
                 id: 2
                 },
                 {
@@ -87,7 +89,8 @@ export default {
                 data11: "Backend: Developed with Java, utilizing JDBC for database connectivity and PostgreSQL for data management. RESTful API design ensures smooth communication between the backend and frontend.",
                 data12: "Frontend: Built with Vue.js for a dynamic and responsive user interface. Axios facilitates efficient API calls.",
                 demonstrates: "This project demonstrates strong teamwork and collaboration, as well as proficiency in full-stack development, API integration, and UI/UX design. It showcases a practical application with scalable architecture and room for future growth and features.",
-                htmlUrl: "https://playbillmemory.netlify.app",
+                find: "Find it here: ",
+                htmlUrl: "https://github.com/bpcahalen/World-Bytes",
                 id: 3
                 }
             ]

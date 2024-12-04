@@ -21,8 +21,8 @@
         After finishing the program I wanted to further expand my skill set and continued learning independently which is when I earned my AWS Cloud Practitioner certification, solidifying my commitment to building a career in tech.
       </p>
     </div>
+    <h2 class="certTitle">Here You Can See All My Certifications From Google, Tech Elevator, and AWS</h2>
     <div class="certificates">
-            <h2 class="certTitle">Here You Can See All My Certifications From Google, Tech Elevator, and AWS</h2>
             <div class="certSlide">
                 <div class="aws">
                     <h2 class="awsTitle">AWS Certification</h2>
@@ -80,6 +80,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height:100%;
+  cursor: default;
 }
 
 .introPart{
@@ -131,16 +132,33 @@
 .certificates{
     white-space: nowrap;
     padding: 20px 0;
+    position: relative;
 }
+
+/* .certificates::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), wheat);
+  content: "";
+  z-index: 2;
+} */
+
+.certificates:hover .certSlide{
+  animation-play-state: paused;
+}
+
 .certTitle{
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px 0;
   text-decoration: underline black 3px;
 }
 
 .certSlide{
     display: inline-flex;
-    animation: 20s slide infinite linear;
+    animation: 35s slide infinite linear;
 }
 
 .aws, .te, .it{
