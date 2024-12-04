@@ -5,7 +5,7 @@
     <button class="enter" @click="enter = !enter">Enter</button>
   </div>
   </Transition> -->
-  <div v-if="!enter">
+  <div>
     <header>
       <div class="navigation">
         <h2 class="name">Barrett Cahalen</h2>
