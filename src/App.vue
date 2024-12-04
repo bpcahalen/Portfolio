@@ -1,10 +1,10 @@
 <template>
-  <Transition>
+  <!-- <Transition>
     <div class="welcome" v-if="enter">
     <h1 class="welcomeMessage">Welcome To My Portfolio</h1>
     <button class="enter" @click="enter = !enter">Enter</button>
   </div>
-  </Transition>
+  </Transition> -->
   <div v-if="!enter">
     <header>
       <div class="navigation">
@@ -13,7 +13,7 @@
           <router-link to="/">Home</router-link>
           <!-- <router-link to="/about">About</router-link> -->
           <router-link to="/projects">Projects</router-link>
-          <a role="button" href="../dist/Barrett Cahalen Resume.pdf" download>Resume</a>
+          <a role="button" href="../src/Barrett Cahalen Resume.pdf" download>Resume</a>
           <router-link to="/contactme">Contact Me</router-link>
         </nav>
       </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import resume from "../public/Barrett Cahalen Resume.pdf";
+import resume from "../src/Barrett Cahalen Resume.pdf";
 
 export default {
   data() {

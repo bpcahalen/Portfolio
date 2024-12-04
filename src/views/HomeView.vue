@@ -17,7 +17,7 @@
       </p>
     </div>
     <p class="intro"> I want to thank you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. 
-        <br>If you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. 
+        <br>To see my full skills list you can download my resume by clikcing the 'Resume' button at the top of the page.
       </p>
     </div>
     <h2 class="certTitle">Here You Can See All My Certifications From Google, Tech Elevator, and AWS</h2>
@@ -119,7 +119,7 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 
 .headshot1{
   width: 300px;
-  height: 300px;
+  height: 350px;
 }
 
 @keyframes slide{
