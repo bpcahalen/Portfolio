@@ -6,7 +6,41 @@
                     <img class="image" :src="project.source" />
                 </div>
                 <div class="definition">
-                    <p>{{project.description}}</p>
+                    <p class="description">{{project.description}}</p>
+                    <p class="keyFeatures">Key Features: </p>
+                    <table>
+                        <tr>
+                            <td>{{ project.data1 }}</td>
+                            <td>
+                                <ul>
+                                    <li>{{ project.data2 }}</li>
+                                    <li>{{ project.data3 }}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{{ project.data4 }}</td>
+                            <td><ul>
+                                    <li>{{ project.data5 }}</li>
+                                    <li>{{ project.data6 }}</li>
+                                </ul></td>
+                        </tr>
+                        <tr>
+                            <td>{{ project.data7 }}</td>
+                            <td><ul>
+                                    <li>{{ project.data8 }}</li>
+                                    <li>{{ project.data9 }}</li>
+                                </ul></td>
+                        </tr>
+                        <tr>
+                            <td>{{ project.data10 }}</td>
+                            <td><ul>
+                                    <li>{{ project.data11 }}</li>
+                                    <li>{{ project.data12 }}</li>
+                                </ul></td>
+                        </tr>
+                    </table>
+                    <p class="demonstrates">{{ project.demonstrates }}</p>
                 </div>
                 <span class="projectLink">Find it here: <a
                     class="projectLink2" :href="project.htmlUrl" target="_blank">{{ project.htmlUrl }}</a></span>
@@ -56,6 +90,7 @@ export default{
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
+    margin: 0;
 }
 
 .projectLink2 {
@@ -63,6 +98,7 @@ export default{
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
+    margin: 0;
 }
 
 .projectLink2:hover {
@@ -76,6 +112,16 @@ export default{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
     font-size: 135%;
+}
+
+.keyFeatures{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.description, .demonstrates{
+    text-align: center;
 }
 </style>
