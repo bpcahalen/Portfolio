@@ -3,19 +3,26 @@
     <div class="introPart">
       <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
       <img src="../images/businessPhoto.jpg" class="headshot1">
-      <p class="intro"> I want to start by thanking you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. While you're here you'll 
-      get to learn all about my journey into the tech world from being a professional dancer. You'll see some projects I've had the pleasure of working on either solo or with a team. 
-      And if you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. I think that's about all that I've got to say, so without 
-      further ado, I'd like to introduce myself a little more...
+      <p class="intro"> I want to start by thanking you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. 
+        <br>And if you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. 
+        <br>I think that's about all that I've got to say, so without further ado, I'd like to introduce myself a little more...
       </p>
     </div>
-    <div>
-      <p class="introPt2">Originally from a small town in Central California, I grew up performing and dancing for as long as I could remember. 
-        I eventually went to Oklahoma City University where I attained my Bachelors Degree in Dance Performance. 
+    <div class="intoTech">
+      <p class="introPt2">
+        Originally from California, I grew up being apart of the entertainment industry as a dancer, a passion that eventually led me to earn a Bachelor's degree in Dance Performance from Oklahoma City University. 
+        After graduating, I joined Celebrity Cruise Line, where I eventually advanced to the role of dance captain/team lead, allowing me to hone my leadership, communication, and organizational skills in a fast-paced, dynamic environment.
+
+        Following my time with Celebrity Cruises, I decided to relocate to New York City. 
+        About a year into my time in the city, I realized I was seeking something more in life and began exploring new career paths. 
+        That’s when I stumbled upon Google’s IT Support Specialist Course, which helped ignite my interest in technology. 
+        This newfound passion motivated me to attend Tech Elevator's intensive 14-week full-stack development program. 
+        Here I learned quintessential programming skills as Java, SQL, HTML, CSS, JS, and much more. 
+        After finishing the program I wanted to further expand my skill set and continued learning independently which is when I earned my AWS Cloud Practitioner certification, solidifying my commitment to building a career in tech.
       </p>
     </div>
     <div class="certificates">
-            <h2>Certifications</h2>
+            <h2 class="certTitle">Here You Can See All My Certifications From Google, Tech Elevator, and AWS</h2>
             <div class="certSlide">
                 <div class="aws">
                     <h2 class="awsTitle">AWS Certification</h2>
@@ -88,6 +95,7 @@
   font-size: larger;
   font-family: "Lora", serif;
   text-indent: 70px;
+  text-align: center;
 }
 
 .introName{
@@ -96,6 +104,14 @@
   color: black;
   font-family: "Lora", serif;
   font-size: 55px;
+}
+
+.intoTech{
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  font-size: larger;
+  font-family: "Lora", serif;
+  text-indent: 70px;
 }
 
 .headshot1{
@@ -115,6 +131,11 @@
 .certificates{
     white-space: nowrap;
     padding: 20px 0;
+}
+.certTitle{
+  text-align: center;
+  margin-bottom: 40px;
+  text-decoration: underline black 3px;
 }
 
 .certSlide{

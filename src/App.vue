@@ -20,8 +20,8 @@
     </header>
     <RouterView />
     <footer>
-      <a class="link">LinkedIn</a>
-      <a class="link">GitHub</a>
+      <a class="link" href="https://www.linkedin.com/in/barrett-cahalen/" target="_blank">LinkedIn</a>
+      <a class="link" href="https://github.com/bpcahalen" target="_blank">GitHub</a>
 
     </footer>
   </div>

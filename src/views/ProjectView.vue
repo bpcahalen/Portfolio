@@ -5,9 +5,9 @@
         <h3 class="projectWelcome2">Here you can see a few examples of projects I've created or co-created along with
             the use of languages or frameworks such as: <br> Java, SQL, HTML, CSS, JS, Spring, and Vue.js.</h3>
             <div class="quickAccess">
-                <a href="#1" id="project-1" class="jump">Frontend Project: Memory Card Game</a>
-                <a href="#2" id="project-2" class="jump">Backend Project: TenMo Service</a>
-                <a href="#3" id="project-3" class="jump">Fullstack Project: World Byte Meal Planning Application</a>
+                <a href="#1" id="project-1" class="jump">Frontend Project</a>
+                <a href="#2" id="project-2" class="jump">Backend Project</a>
+                <a href="#3" id="project-3" class="jump">Fullstack Project</a>
             </div>
         <div>
             <project :projects="projects"/>
