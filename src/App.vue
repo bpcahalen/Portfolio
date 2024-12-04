@@ -1,8 +1,10 @@
 <template>
-  <div class="welcome" v-if="enter">
+  <Transition>
+    <div class="welcome" v-if="enter">
     <h1 class="welcomeMessage">Welcome To My Portfolio</h1>
-    <button class="enter" @click="enterSite">Enter</button>
+    <button class="enter" @click="enter = !enter">Enter</button>
   </div>
+  </Transition>
   <div v-if="!enter">
     <header>
       <div class="navigation">
@@ -33,15 +35,6 @@ export default {
     return {
       enter: true
     }
-  },
-  methods: {
-    enterSite() {
-      if (this.enter) {
-        this.enter = false;
-      } else {
-        this.enter = true;
-      }
-    }
   }
 }
 </script>
@@ -50,6 +43,25 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@1,500&display=swap');
+
+.v-enter-active {
+  animation: bounce-in 0.5s;
+}
+.v-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .welcome {
   background: black;
