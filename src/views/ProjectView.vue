@@ -68,7 +68,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: default;
-    color: navy;
+    color: black;
 }
 
 .projectTitle {
@@ -77,7 +77,7 @@ export default {
     font-size: 500%;
     margin-bottom: 15px;
     text-decoration: underline;
-    color: navy;
+    color: black;
 }
 
 .projectWelcome {
@@ -102,13 +102,13 @@ export default {
 }
 
 .jump{
-    color: navy;
+    color: black;
     font-family: "Lora", serif;
 }
 
 .jump:hover{
-    color: navy;
-    text-decoration: underline navy;
+    color: black;
+    text-decoration: underline black;
 }
 
 /* .projects {

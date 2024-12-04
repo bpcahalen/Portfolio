@@ -24,7 +24,7 @@ export default{
 <style>
 
 .projects{
-    color: navy;
+    color: black;
     margin: 40px 15px;
     display: flex;
     flex-direction: column;
@@ -52,22 +52,22 @@ export default{
 }
 
 .projectLink {
-    color: navy;
+    color: black;
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
 }
 
 .projectLink2 {
-    color: navy;
+    color: black;
     font-size: medium;
     font-family: "Lora", serif;
     font-weight: bold;
 }
 
 .projectLink2:hover {
-    color: navy;
-    text-decoration: underline navy;
+    color: black;
+    text-decoration: underline black;
     cursor: pointer;
 }
 

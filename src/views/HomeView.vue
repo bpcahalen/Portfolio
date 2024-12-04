@@ -4,12 +4,16 @@
       <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
       <img src="../images/businessPhoto.jpg" class="headshot1">
       <p class="intro"> I want to start by thanking you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. While you're here you'll 
-      get to learn all about my journey into the techn world from being a professional dancer. You'll see some projects I've had the pleasure of working on either solo or with a team. 
+      get to learn all about my journey into the tech world from being a professional dancer. You'll see some projects I've had the pleasure of working on either solo or with a team. 
       And if you truly enjoy all that you see, you can download my resume by clicking the "Resume" button in the top right corner. I think that's about all that I've got to say, so without 
       further ado, I'd like to introduce myself a little more...
       </p>
     </div>
-
+    <div>
+      <p class="introPt2">Originally from a small town in Central California, I grew up performing and dancing for as long as I could remember. 
+        I eventually went to Oklahoma City University where I attained my Bachelors Degree in Dance Performance. 
+      </p>
+    </div>
     <div class="certificates">
             <h2>Certifications</h2>
             <div class="certSlide">
