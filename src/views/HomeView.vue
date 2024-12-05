@@ -1,5 +1,5 @@
 <template >
-  <div class="home">
+  <div class="home" >
     <div class="introPart">
       <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
       <img src="../images/businessPhoto2.jpg" class="headshot1">
@@ -20,7 +20,7 @@
         <br>To see my full skills list you can download my resume by clikcing the 'Resume' button at the top of the page.
       </p>
     </div>
-    <h2 class="certTitle">Here You Can See All My Certifications From Google, Tech Elevator, and AWS</h2>
+    <h2 class="certTitle">Certifications</h2>
     <div class="certificates">
             <div class="certSlide">
                 <div class="aws">
@@ -148,9 +148,9 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
   z-index: 2;
 } */
 
-.certificates:hover .certSlide{
+/* .certificates:hover .certSlide{
   animation-play-state: paused;
-}
+} */
 
 .certTitle{
   text-align: center;

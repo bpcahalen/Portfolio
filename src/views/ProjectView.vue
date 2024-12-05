@@ -5,16 +5,16 @@
         <h3 class="projectWelcome2">Here you can see a few examples of projects I've created or co-created along with
             the use of languages or frameworks such as: <br> Java, SQL, HTML, CSS, JS, Spring Boot, RESTful API's, JDBC, and Vue.js.</h3>
             <div class="quickAccess">
-                <a href="#1" id="project-1" class="jump">Frontend Project</a>
-                <a href="#2" id="project-2" class="jump">Backend Project</a>
-                <a href="#3" id="project-3" class="jump">Fullstack Project</a>
+                <a href="#1" id="project-1" class="jump">Frontend Project <fa :icon="['fas', 'file-code']" class="projectJump"/></a>
+                <a href="#2" id="project-2" class="jump">Backend Project <fa :icon="['fas', 'file-lines']" class="projectJump"/></a>
+                <a href="#3" id="project-3" class="jump">Fullstack Project <fa :icon="['fas', 'laptop-code']" class="projectJump"/></a>
             </div>
         <div>
             <project :projects="projects"/>
         </div>
-
     </div>
 </template>
+
 
 <script>
 
@@ -154,6 +154,10 @@ export default {
 .jump:hover{
     color: white;
     text-decoration: underline white;
+}
+
+.projectJump{
+    margin-left: 5px;;
 }
 
 /* .projects {

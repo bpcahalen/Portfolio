@@ -1,47 +1,54 @@
 <template>
+  <scrollButton />
   <!-- <Transition>
     <div class="welcome" v-if="enter">
     <h1 class="welcomeMessage">Welcome To My Portfolio</h1>
     <button class="enter" @click="enter = !enter">Enter</button>
   </div>
   </Transition> -->
-  <div>
+  <div id="top">
     <header>
       <div class="navigation">
         <h2 class="name">Barrett Cahalen</h2>
         <nav class="menu">
-          <router-link to="/">Home</router-link>
-          <!-- <router-link to="/about">About</router-link> -->
-          <router-link to="/projects">Projects</router-link>
-          <a role="button" href="../BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf">Resume</a>
-          <router-link to="/contactme">Contact Me</router-link>
+          <router-link to="/" class="routing">Home</router-link>
+          <router-link to="/projects" class="routing">Projects</router-link>
+          <a role="button" href="../BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf" class="routing">Resume</a>
+          <router-link to="/contactme" class="routing">Contact Me</router-link>
         </nav>
       </div>
     </header>
     <RouterView />
     <footer>
-      <a class="link" href="https://www.linkedin.com/in/barrett-cahalen/" target="_blank">LinkedIn</a>
-      <a class="link" href="https://github.com/bpcahalen" target="_blank">GitHub</a>
-
+      <div class="link">
+      <a class="linkName" href="https://www.linkedin.com/in/barrett-cahalen/" target="_blank">LinkedIn<fa :icon="['fab', 'linkedin']" class="linkedIn"/></a>
+      <a class="linkName" href="https://github.com/bpcahalen" target="_blank">GitHub<fa :icon="['fab', 'github']" /></a>
+      </div>
     </footer>
   </div>
 </template>
 
+<script setup>
+import scrollButton from "../src/components/scrollButton.vue";
+</script>
+
 <script>
-import VuePdfViewer from "pdf-viewer-vue";
 import resume from "../public/BarrettCahalenResume.pdf";
 
 export default {
   data() {
     return {
-      enter: true
+      // enter: true
+      showButton: false
     }
-  }
+  }, 
+  
 }
 </script>
 
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@1,500&display=swap');
 
@@ -64,7 +71,7 @@ export default {
 }
 
 
-.welcome {
+/* .welcome {
   background: black;
   height: 100vh;
   width: 100vw;
@@ -73,7 +80,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0;
-}
+} */
 
 /* .enter{
   animation: transitionOut 2s;
@@ -142,9 +149,10 @@ export default {
 html,
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   margin: 0;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
 }
 
@@ -175,30 +183,43 @@ header {
   cursor: default;
 }
 
-a {
+.routing {
   color: white;
   text-decoration: none;
   font-size: larger;
   font-family: "Lora", serif;
 }
 
-a:hover {
+.routing:hover{
   text-decoration: underline solid;
   color: wheat;
 }
 
 footer{
+  height: 100%;
   margin: 0;
   background-color: navy;
   border-top: 	#505050 6px solid;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   padding: 10px 0px 10px 0px;
 }
 
 .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkName{
   cursor: pointer;
+  width: 95px;
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Lora", serif;
+  display: flex; 
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .resumeButton{
@@ -211,8 +232,13 @@ footer{
   cursor: pointer;
 }
 
-.resumeButton:hover{
+.linkName:hover{
   text-decoration: underline solid;
   color: wheat;
 }
+
+.linkedIn{
+  margin: 0 0 0 4px;
+}
+
 </style>
