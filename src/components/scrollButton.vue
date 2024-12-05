@@ -21,7 +21,7 @@ export default{
     },
     methods: {
         handleScroll(){
-            if(window.scrollY > 500){
+            if(window.scrollY > 600){
                 this.visible = true;
             } else{
                 this.visible = false;

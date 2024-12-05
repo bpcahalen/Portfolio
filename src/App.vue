@@ -9,7 +9,7 @@
   <div id="top">
     <header>
       <div class="navigation">
-        <h2 class="name">Barrett Cahalen</h2>
+        <router-link to="/" class="name">Barrett Cahalen</router-link>
         <nav class="menu">
           <router-link to="/" class="routing">Home</router-link>
           <router-link to="/projects" class="routing">Projects</router-link>
@@ -180,7 +180,10 @@ header {
 .name {
   color: white;
   font-family: "Lora", serif;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 19.92px 0;
 }
 
 .routing {

@@ -2,18 +2,16 @@
   <div class="home" >
     <div class="introPart">
       <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
-      <img src="../images/businessPhoto2.jpg" class="headshot1">
       <div class="intoTech">
+        <img src="../images/businessPhoto2.jpg" class="headshot1">
       <p class="introPt2">
-        Originally from California, I grew up being apart of the entertainment industry as a dancer, a passion that eventually led me to earn a Bachelor's degree in Dance Performance from Oklahoma City University. 
-        After graduating, I joined Celebrity Cruise Line, where I eventually advanced to the role of dance captain/team lead, allowing me to hone my leadership, communication, and organizational skills in a fast-paced, dynamic environment.
-
-        Following my time with Celebrity Cruises, I decided to relocate to New York City. 
-        About a year into my time in the city, I realized I was seeking something more in life and began exploring new career paths. 
-        That’s when I stumbled upon Google’s IT Support Specialist Course, which helped ignite my interest in technology. 
-        This newfound passion motivated me to attend Tech Elevator's intensive 14-week full-stack development program. 
-        Here I learned quintessential programming skills as Java, SQL, HTML, CSS, JS, and much more. 
-        After finishing the program I wanted to further expand my skill set and continued learning independently which is when I earned my AWS Cloud Practitioner certification, solidifying my commitment to building a career in tech.
+        I'm a software developer with a background in entertainment. As a prior professional dancer, I bring a unique perspective to my work. 
+        Years of performing and leading teams as a dance captain have honed my time management, communication, and collaboration skills, along with a deep understanding of the creative process. 
+        My passion for problem-solving and a desire to make more of an impact led me to transition into tech, leading me to attend Tech Elevator's intensive 14-week full-stack development program. 
+        During my time there, I gained expertise in Java, SQL, RESTful APIs, and modern web technologies like Vue.js. 
+        After graduation, I further deepend my technical foundation by earning an AWS Cloud Practitioner certification, expanding my understanding of cloud computing and modern infrastructure.
+        I approach every challenge as a puzzle, embracing the dedication and persistence needed to bring all the pieces together seamlessly. 
+        Whether it's on the stage or in code, I thrive on delivering results that exceed expectations and reflect my commitment to hard work and precision.
       </p>
     </div>
     <p class="intro"> I want to thank you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it. 
@@ -101,6 +99,12 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
   text-align: center;
 }
 
+.introPt2{
+  width: 66%;
+  height: 350px;
+  margin: 0;
+}
+
 .introName{
   margin: 0 0 10px 0;
   padding: 20px 0 0 0;
@@ -111,10 +115,12 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 
 .intoTech{
   margin: 0;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 40px 20px;
   font-size: larger;
   font-family: "Lora", serif;
   text-indent: 70px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .headshot1{
