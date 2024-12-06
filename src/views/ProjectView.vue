@@ -134,6 +134,7 @@ export default {
     font-size: 100%;
     margin-bottom: 35px;
     font-weight: bold;
+    line-height: 25px;
 }
 
 .quickAccess{

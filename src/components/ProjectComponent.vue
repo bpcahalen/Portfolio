@@ -76,7 +76,7 @@ export default{
 .projectName{
     text-decoration: underline solid 3px;
     font-size: 50px;
-    margin: 15px 0;
+    margin: 5px 0 15px 0;
 }
 
 .image-link {
@@ -125,9 +125,22 @@ export default{
 .keyFeatures{
     font-weight: bolder;
     font-size: larger;
+    margin: 0;
 }
 
-.description, .demonstrates{
+li{
+    line-height: 35px;
+}
+
+.description{
     text-align: center;
+    line-height: 30px;
+}
+
+.demonstrates{
+    text-align: center;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 </style>
