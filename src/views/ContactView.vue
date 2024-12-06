@@ -9,17 +9,21 @@
         </p>
             <div class="formBody">
                 <img src="../images/businessPhoto.jpg" class="headshot2">
-            <form class="form">
+                <div v-if="submitted">
+                    <p class="respond">Thank you for your message! <br>You Can Expect A Response Within 24 Hours!</p>
+                </div>
+            <form @submit.prevent="sendEmail" v-if="!submitted" class="form">
+                <div class="inputArea">
                 <div class="fullName">
-                <label for="fullName">Full Name: </label>
-                <input type="text" id="fullName"><br>
+                <label for="fullName" class="fullNameLabel">Full Name: </label>
+                <input type="text" id="fullName" class="fullNameInput"><br>
                 </div>
                 <div class="email">
-                <label for="email">Email Address: </label>
+                <label for="email" class="emailLabel">Email Address: </label>
                 <input type="text" id="email"><br>
                 </div>
                 <div class="state">
-                <label for="state">State: </label>
+                <label for="state" class="stateLabel">State: </label>
                 <select type="text" id="state">
                     <option value="nothing"></option>
                     <option value="AB">Alabama</option>
@@ -75,21 +79,31 @@
                     <option value="WY">Wyoming</option>
                 </select><br>
                 </div>
+                <div class="message">
                 <label for="subject"></label>
                 <textarea name="subject" id="subject" placeholder="Your Message Here..."></textarea>
+                </div>
+                </div>
                 <input type="submit" value="Submit" class="formSubmit">
             </form>
             </div>
-            <p class="respond">You Can Expect A Response Within 24 Hours!</p>
         </div>
-
     </div>
 </template>
 
 <script>
 
 export default{
-    
+    data(){
+        return{
+            submitted: false
+        }
+    },
+    methods: {
+        sendEmail(){
+            this.submitted = true;
+        }
+    }
 }
 
 </script>
@@ -122,6 +136,7 @@ export default{
 .formBody{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     margin: 20px 60px;
     border: solid black 2px;
@@ -139,16 +154,31 @@ export default{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center ;
-    width: 400px;
+    align-items: center;
+    width: 415px;
+    height: 357px;
     margin: 0;
     padding: 0 0 0 125px;
     font-family: "Lora", serif;
 }
 
+.respond{
+    width: 415px;
+    height: 357px;
+    margin: 0;
+    padding: 0 0 0 125px;
+    font-family: "Lora", serif;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
 input{
     height: 22px;
-    width: 300px;
+    width: 335px;
     background-color: white;
     color: black;
     font-family: "Lora", serif;
@@ -156,25 +186,31 @@ input{
     font-size: 15px;
 }
 
-label{
+.fullNameLabel, .emailLabel{
     font-family: "Lora", serif;
-    padding: 2px;
+    margin: 0 10px 0 0 ;
+    width: 150px;
+}
+
+.stateLabel{
+    font-family: "Lora", serif;
+    margin: 0 10px 0 0 ;
+    width: 40px;
 }
 
 .fullName, .email{
     margin: 2px;
     height: 60px;
+    width: 375px;
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
 }
 
 .state{
-    margin: 2px;
+    margin: 0 0 30px 0;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 55px;
 }
 
 .formSubmit{
@@ -200,11 +236,6 @@ textarea{
 
 ::placeholder{
     color: black;
-}
-
-.respond{
-    margin: 25px 0 20px 0;
-    text-align: center;
 }
 
 /* .resume{
