@@ -8,19 +8,24 @@
             Feel free to reach out—I’d love to connect and explore how we can work together and what we might be able to build together!
         </p>
             <div class="formBody">
+                <div class="headshot">
                 <img src="../images/businessPhoto.jpg" class="headshot2">
-                <div v-if="submitted">
+            </div>
+                <div v-if="submitted == 'sent'">
                     <p class="respond">Thank you for your message! <br>You Can Expect A Response Within 24 Hours!</p>
                 </div>
-            <form @submit.prevent="sendEmail" v-if="!submitted" class="form">
+                <div v-if="submitted == 'loading'" class="loading">
+                    <fa class="spinner" :icon="['fas', 'rotate']" />
+                </div>
+            <form @submit.prevent="sendEmail" v-if="submitted == 'start'" class="form">
                 <div class="inputArea">
                 <div class="fullName">
-                <label for="fullName" class="fullNameLabel">Full Name: </label>
-                <input type="text" id="fullName" class="fullNameInput"><br>
+                <label for="fullName" class="fullNameLabel">Full Name <fa class="asterisk" :icon="['fas', 'asterisk']" /></label>
+                <input type="text" id="fullName" class="fullNameInput" required><br>
                 </div>
                 <div class="email">
-                <label for="email" class="emailLabel">Email Address: </label>
-                <input type="text" id="email"><br>
+                <label for="email" class="emailLabel">Email Address <fa class="asterisk" :icon="['fas', 'asterisk']" /> </label>
+                <input type="text" id="email" class="emailInput" required><br>
                 </div>
                 <div class="state">
                 <label for="state" class="stateLabel">State: </label>
@@ -80,8 +85,8 @@
                 </select><br>
                 </div>
                 <div class="message">
-                <label for="subject"></label>
-                <textarea name="subject" id="subject" placeholder="Your Message Here..."></textarea>
+                <label for="subject" class="messageLabel">Message <fa class="asterisk" :icon="['fas', 'asterisk']" /></label>
+                <textarea name="subject" id="subject" placeholder="Your Message Here..." required></textarea>
                 </div>
                 </div>
                 <input type="submit" value="Submit" class="formSubmit">
@@ -96,12 +101,13 @@
 export default{
     data(){
         return{
-            submitted: false
+            submitted: "start"
         }
     },
     methods: {
         sendEmail(){
-            this.submitted = true;
+            this.submitted = "loading";
+            setTimeout(() => {this.submitted = "sent";}, 1500)
         }
     }
 }
@@ -131,23 +137,38 @@ export default{
     text-align: center;
     margin-bottom: 45px;
     font-size: 17px;
+    line-height: 30px;
 }
 
 .formBody{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     margin: 20px 60px;
     border: solid black 2px;
     width: 890px;
 }
 
+.headshot{
+    width: 400px;
+    height: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .headshot2 {
-    width: 300px;
-    height: 350px;
+    width: 335px;
+    height: 385px;
     margin: 0;
     padding: 0;
+}
+
+.asterisk{
+    color: red;
+    height: 7px;
+    width: 7px;
+    padding-bottom: 10px;
 }
 
 .form{
@@ -158,37 +179,55 @@ export default{
     width: 415px;
     height: 357px;
     margin: 0;
-    padding: 0 0 0 125px;
+    padding: 40px;
     font-family: "Lora", serif;
 }
 
-.respond{
+.respond, .loading{
     width: 415px;
     height: 357px;
     margin: 0;
-    padding: 0 0 0 125px;
+    padding: 40px;
     font-family: "Lora", serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 60px;
     display: flex;
     justify-content: center;
     align-items: center
 }
 
-input{
-    height: 22px;
-    width: 335px;
+.spinner{
+    font-size: 50px;
+    color: navy;
+    animation: 5s spin linear infinite;
+}
+
+@keyframes spin{
+    from{transform: rotate(0deg)}
+    to {transform: rotate(1000deg)}
+}
+
+.fullNameInput, .emailInput{
+    width: 375px;
     background-color: white;
     color: black;
     font-family: "Lora", serif;
     border: black 1px solid;
     font-size: 15px;
+    padding: 5px 0 5px 5px;
 }
 
 .fullNameLabel, .emailLabel{
     font-family: "Lora", serif;
     margin: 0 10px 0 0 ;
+    width: 150px;
+    padding-bottom: 5px;
+}
+
+.messageLabel{
+    font-family: "Lora", serif;
+    font-size: 16px;
     width: 150px;
 }
 
@@ -199,11 +238,11 @@ input{
 }
 
 .fullName, .email{
-    margin: 2px;
+    margin: 2px 2px 10px 2px;
     height: 60px;
     width: 375px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
 .state{
@@ -211,6 +250,10 @@ input{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.message{
+    height: 175px;
 }
 
 .formSubmit{
@@ -232,6 +275,10 @@ textarea{
     background-color: white;
     height: 125px;
     width: 375px;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 15px;
+    resize: none;
 }
 
 ::placeholder{
