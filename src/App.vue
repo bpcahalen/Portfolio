@@ -6,6 +6,12 @@
     <button class="enter" @click="enter = !enter">Enter</button>
   </div>
   </Transition> -->
+  <div class="phone">
+      <h1 class="phoneWords"><fa :icon="['fas', 'triangle-exclamation']" /> Coming Soon <fa :icon="['fas', 'triangle-exclamation']" /> <br> Barrett's Portfolio for Phone</h1>
+    </div>
+    <div class="tablet">
+      <h1 class="tabletWords"> <fa :icon="['fas', 'triangle-exclamation']" /> Coming Soon <fa :icon="['fas', 'triangle-exclamation']" /> <br> Barrett's Portfolio for Tablet/IPad </h1>
+    </div>
   <div id="top">
     <header>
       <div class="navigation">
@@ -34,14 +40,16 @@ import scrollButton from "../src/components/scrollButton.vue";
 
 <script>
 import resume from "../public/BarrettCahalenResume.pdf";
+import { hydrateOnMediaQuery } from "vue";
 
 export default {
   data() {
     return {
       // enter: true
-      showButton: false
+      showButton: false,
+      screen: "main"
     }
-  }, 
+  }
   
 }
 </script>
@@ -51,6 +59,8 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@1,500&display=swap');
+
+
 
 .v-enter-active {
   animation: bounce-in 0.5s;
@@ -243,5 +253,58 @@ footer{
 .linkedIn{
   margin: 0 0 0 4px;
 }
+
+@media only screen and (max-width: 768px) {
+    #top, .tablet{
+      display: none;
+   }
+
+   .phone{
+    background-image: url("../src/images/under-construction.jpg");
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .phoneWords{
+    width: 100vw;
+    color: black;
+    text-align: center;
+    background-color: gold;
+    padding: 40px;
+   }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #top, .phone{
+      display: none;
+   }
+
+   .tablet{
+    background-image: url("../src/images/under-construction.jpg");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .tabletWords{
+    width: 100vw;
+    color: black;
+    text-align: center;
+    background-color: gold;
+    padding: 40px;
+   }
+}
+
+  @media only screen and (min-width: 1025px){
+    .phone, .tablet{
+      display: none;
+    }
+  }
 
 </style>
