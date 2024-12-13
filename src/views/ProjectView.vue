@@ -149,12 +149,15 @@ export default {
     font-family: "Lora", serif;
     border: navy 2px solid;
     background-color: navy;
-    padding: 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .jump:hover{
     color: white;
     text-decoration: underline white;
+    box-shadow: 3px 3px navy;
 }
 
 .projectJump{

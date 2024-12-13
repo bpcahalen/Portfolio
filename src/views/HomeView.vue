@@ -16,7 +16,7 @@
     </div>
     <div class="footNote">
       <p class="thankYou"> I want to thank you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it.</p>
-      <p class="skills">To see my full list of skills you can download my resume by clikcing the 'Resume' button at the top of the page.</p>
+      <p class="skills">To see my full list of skills, you can download my resume by clikcing the download button in the top right corner of the page.</p>
   </div>
   </div>
     <h2 class="certTitle">Certifications</h2>
@@ -100,7 +100,7 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 }
 
 .skills{
-  width: 600px;
+  width: 2000px;
   text-align: center;
   line-height: 25px;
 }

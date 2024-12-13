@@ -13,8 +13,8 @@
         <nav class="menu">
           <router-link to="/" class="routing">Home</router-link>
           <router-link to="/projects" class="routing">Projects</router-link>
-          <a role="button" href="../BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf" class="routing">Resume</a>
           <router-link to="/contactme" class="routing">Contact Me</router-link>
+          <a role="button" href="../BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf" class="routing"><fa :icon="['fas', 'download']" /></a>
         </nav>
       </div>
     </header>

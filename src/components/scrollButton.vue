@@ -1,7 +1,7 @@
 <template>
     <Transition>
         <a v-if="visible" href="#top" class="buttonScroll">
-            <fa :icon="['fas', 'circle-chevron-up']"/>
+            <fa :icon="['fas', 'circle-up']"/>
         </a>
     </Transition>
 </template>

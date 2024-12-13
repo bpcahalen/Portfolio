@@ -17,19 +17,22 @@
                 <div v-if="submitted == 'loading'" class="loading">
                     <fa class="spinner" :icon="['fas', 'rotate']" />
                 </div>
-            <form @submit.prevent="sendEmail" v-if="submitted == 'start'" class="form">
+                <div class="error" v-if="error">Sorry, there was an error sending your message. 
+                    <br>Please try again in a couple minutes as I'd love to know what you have to say!
+                </div>
+            <form @submit.prevent="sendEmail" @keypress.enter.prevent="sendEmail" v-if="submitted == 'start'" class="form" ref="form">
                 <div class="inputArea">
                 <div class="fullName">
                 <label for="fullName" class="fullNameLabel">Full Name <fa class="asterisk" :icon="['fas', 'asterisk']" /></label>
-                <input type="text" id="fullName" class="fullNameInput" required><br>
+                <input type="text" id="fullName" class="fullNameInput" name="name" required><br>
                 </div>
                 <div class="email">
                 <label for="email" class="emailLabel">Email Address <fa class="asterisk" :icon="['fas', 'asterisk']" /> </label>
-                <input type="text" id="email" class="emailInput" required><br>
+                <input type="text" id="email" class="emailInput" name="email" required><br>
                 </div>
                 <div class="state">
                 <label for="state" class="stateLabel">State: </label>
-                <select type="text" id="state">
+                <select id="state" class="stateSelect" name="state">
                     <option value="nothing"></option>
                     <option value="AB">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -86,7 +89,7 @@
                 </div>
                 <div class="message">
                 <label for="subject" class="messageLabel">Message <fa class="asterisk" :icon="['fas', 'asterisk']" /></label>
-                <textarea name="subject" id="subject" placeholder="Your Message Here..." required></textarea>
+                <textarea name="message" id="subject" placeholder="Your Message Here..." required></textarea>
                 </div>
                 </div>
                 <input type="submit" value="Submit" class="formSubmit">
@@ -97,17 +100,32 @@
 </template>
 
 <script>
+// import emailService from "../services/emailService";
+import emailjs from "@emailjs/browser";
 
 export default{
     data(){
         return{
-            submitted: "start"
+            submitted: "start",
+            error: false
         }
     },
     methods: {
         sendEmail(){
-            this.submitted = "loading";
-            setTimeout(() => {this.submitted = "sent";}, 1500)
+            emailjs
+            .sendForm('service_da5p25p', 'template_w550i1f', this.$refs.form, {publicKey:'2mXKjhEHNCkJh7MYv'})
+            .then(response => {
+                if(response.status === 200){
+                    this.submitted = "loading";
+                    setTimeout(() => {this.submitted = "sent";}, 1500)
+                }
+            })
+            .catch(response => {
+                if(response.status === 400){
+                    this.error = true;
+                    this.submitted = "";
+                }
+            })
         }
     }
 }
@@ -145,8 +163,10 @@ export default{
     justify-content: center;
     align-items: center;
     margin: 20px 60px;
+    padding: 5px;
     border: solid black 2px;
     width: 890px;
+    border-radius: 5px;
 }
 
 .headshot{
@@ -181,6 +201,20 @@ export default{
     margin: 0;
     padding: 40px;
     font-family: "Lora", serif;
+}
+
+.error{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 415px;
+    height: 357px;
+    margin: 0;
+    padding: 40px;
+    font-family: "Lora", serif;
+    font-size: 18px;
+    line-height: 35px;
 }
 
 .respond, .loading{
@@ -237,16 +271,29 @@ export default{
     width: 40px;
 }
 
+.stateSelect{
+    font-size: 15px;
+    font-family: "Lora", serif;
+    padding: 2px 0 2px 2px;
+}
+
 .fullName, .email{
-    margin: 2px 2px 10px 2px;
     height: 60px;
     width: 375px;
     display: flex;
     flex-direction: column;
 }
 
+.email{
+    margin: 15px 2px 20px 2px;
+}
+
+.fullName{
+    margin: 15px 2px 10px 2px;
+}
+
 .state{
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -257,14 +304,22 @@ export default{
 }
 
 .formSubmit{
+    background-color: white;
+    color: navy;
     margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
     width: 90px;
     height: 25px;
+    border-radius: 5px;
+    border: solid 1px black;
 }
 
 .formSubmit:hover{
     cursor: pointer;
-    background-color: lightgray;
+    background-color: navy;
+    color: white;
+    box-shadow: 3px 3px navy;
 }
 
 select{
