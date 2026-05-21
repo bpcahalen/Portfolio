@@ -9,6 +9,7 @@
                     <p class="description">{{project.description}}</p>
                     <p class="keyFeatures">Key Features: </p>
                     <table>
+                        <tbody>
                         <tr>
                             <td>{{ project.data1 }}</td>
                             <td>
@@ -45,6 +46,7 @@
                                 </ul>
                             </td>
                         </tr>
+                        </tbody>
                     </table>
                     <p class="demonstrates">{{ project.demonstrates }}</p>
                 </div>

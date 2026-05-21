@@ -1,23 +1,21 @@
 <template >
   <div class="home" >
     <div>
-      <h1 class="introName">Hi, my name is Barrett Cahalen!</h1>
+      <h1 class="introName">Hi, my name is <br class="mobile-break"> Barrett Cahalen!</h1>
       <div class="introPart">
         <img src="../images/businessPhoto2.jpg" class="headshot1">
       <p class="introPt2">
-        I'm a software developer with a background in entertainment. As a prior professional dancer, I bring a unique perspective to my work. 
-        Years of performing and leading teams as a dance captain have honed my time management, communication, and collaboration skills, along with a deep understanding of the creative process. 
-        My passion for problem-solving and a desire to make more of an impact led me to transition into tech, leading me to attend Tech Elevator's intensive 14-week full-stack development program. 
-        During my time there, I gained expertise in Java, SQL, RESTful APIs, and modern web technologies like Vue.js. 
-        After graduation, I further deepend my technical foundation by earning an AWS Cloud Practitioner certification, expanding my understanding of cloud computing and modern infrastructure.
-        I approach every challenge as a puzzle, embracing the dedication and persistence needed to bring all the pieces together seamlessly. 
-        Whether it's on the stage or in code, I thrive on delivering results that exceed expectations and reflect my commitment to hard work and precision.
+        Before I wrote a single line of code, I spent years on professional stages around the world as a dancer. In live performance, there are no retakes. A missed cue or broken prop doesn’t stop the show—you adapt instantly, without the audience ever noticing. That pressure became my training ground.
+
+Eventually, I was leading a team of 20 performers, learning to solve urgent, high-stakes problems under the twin pressures of a ticking clock and the demand for a flawless final product. That experience didn’t just refine me as an artist—it gave me the calm, resilient, user-focused mindset I now apply to software engineering.
+
+Today, I’m a full-stack developer with a performer’s instinct: clear-headed when production breaks, driven by empathy for the people using what I build, and able to turn creative ideas into practical, well-structured systems.
+
+My move from dance to development was fueled by self-directed learning and persistence—a willingness to step into uncertainty and figure things out as I go. Whether I’m leading a team, fixing bugs against a tight deadline, or anticipating what users need next with the same intuition I once used to read a live audience, I do my best work where precision meets flexibility.
+
+If you’re looking for a creative problem-solver who blends technical skill with a human-centered approach, let’s talk.
       </p>
     </div>
-    <div class="footNote">
-      <p class="thankYou"> I want to thank you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it.</p>
-      <p class="skills">To see my full list of skills, you can download my resume by clikcing the download button in the top right corner of the page.</p>
-  </div>
   </div>
     <h2 class="certTitle">Certifications</h2>
     <div class="certificates">
@@ -61,7 +59,11 @@
                     </a>
                 </div>
             </div>
-        </div>
+    </div>
+    <div class="footNote">
+      <p class="thankYou"> I want to thank you for visiting my site and I hope you enjoy exploring it as much as I enjoyed creating it!</p>
+      <!-- <p class="skills">To see my full list of skills, you can download my resume by clikcing the download button in the top right corner of the page.</p> -->
+  </div>
   </div>
     
 </template>
@@ -86,6 +88,7 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 
 .footNote{
   margin-top: 30px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +99,12 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 
 .thankYou{
  margin: 0;
- font-size: 20px;
+ font-size: 25px;
+ padding: 40px 0;
+ text-decoration: underline;
+ font-weight: bolder;
+ color: darkgrey;
+ -webkit-text-stroke: .5px navy;
 }
 
 .skills{
@@ -106,18 +114,23 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 }
 
 .introPt2{
-  width: 66%;
-  height: 350px;
+  width: 100%;
+  padding: 0 30px;
   margin: 0;
+  line-height: 38px;
 }
 
 .introName{
   margin: 0 0 10px 0;
-  padding: 20px 0 0 0;
+  padding: 30px 0;
   color: black;
   font-family: "Lora", serif;
   font-size: 55px;
   text-align: center;
+}
+
+.mobile-break{
+  display: none;
 }
 
 .introPart{
@@ -132,8 +145,8 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 }
 
 .headshot1{
-  width: 300px;
-  height: 350px;
+  width: 325px;
+  height: 450px;
 }
 
 @keyframes slide{
@@ -168,7 +181,8 @@ import IT from "../../public/Coursera LHS5B98WGRQG.pdf";
 
 .certTitle{
   text-align: center;
-  margin: 40px 0;
+  margin: 30px 0 30px 0;
+  padding-top: 20px;
   text-decoration: underline black 3px;
 }
 

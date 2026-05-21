@@ -24,11 +24,11 @@
                 <div class="inputArea">
                 <div class="fullName">
                 <label for="fullName" class="fullNameLabel">Full Name <fa class="asterisk" :icon="['fas', 'asterisk']" /></label>
-                <input type="text" id="fullName" class="fullNameInput" name="name" required><br>
+                <input type="text" id="fullName" class="fullNameInput" placeholder="Enter your text here..." name="name" required><br>
                 </div>
                 <div class="email">
                 <label for="email" class="emailLabel">Email Address <fa class="asterisk" :icon="['fas', 'asterisk']" /> </label>
-                <input type="text" id="email" class="emailInput" name="email" required><br>
+                <input type="text" id="email" class="emailInput" placeholder="example@example.com" name="email" required><br>
                 </div>
                 <div class="state">
                 <label for="state" class="stateLabel">State: </label>
@@ -275,6 +275,11 @@ export default{
     font-size: 15px;
     font-family: "Lora", serif;
     padding: 2px 0 2px 2px;
+}
+
+::placeholder{
+    color: darkslategrey;
+    opacity: 0.6;
 }
 
 .fullName, .email{

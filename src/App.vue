@@ -6,12 +6,6 @@
     <button class="enter" @click="enter = !enter">Enter</button>
   </div>
   </Transition> -->
-  <div class="phone">
-      <h1 class="phoneWords"><fa :icon="['fas', 'triangle-exclamation']" /> Coming Soon <fa :icon="['fas', 'triangle-exclamation']" /> <br> Barrett's Portfolio for Phone</h1>
-    </div>
-    <div class="tablet">
-      <h1 class="tabletWords"> <fa :icon="['fas', 'triangle-exclamation']" /> Coming Soon <fa :icon="['fas', 'triangle-exclamation']" /> <br> Barrett's Portfolio for Tablet/IPad </h1>
-    </div>
   <div id="top">
     <header>
       <div class="navigation">
@@ -20,7 +14,7 @@
           <router-link to="/" class="routing">Home</router-link>
           <router-link to="/projects" class="routing">Projects</router-link>
           <router-link to="/contactme" class="routing">Contact Me</router-link>
-          <a role="button" href="../BarrettCahalenResume.pdf" download="BarrettCahalenResume.pdf" class="routing"><fa :icon="['fas', 'download']" /></a>
+          <a role="button" href="../Barrett_Cahalen_Resume.pdf" download="Barrett_Cahalen_Resume.pdf" class="routing"><fa :icon="['fas', 'download']" /></a>
         </nav>
       </div>
     </header>
@@ -39,7 +33,7 @@ import scrollButton from "../src/components/scrollButton.vue";
 </script>
 
 <script>
-import resume from "../public/BarrettCahalenResume.pdf";
+// import resume from "../public/Barrett_Cahalen_Resume.pdf";
 import { hydrateOnMediaQuery } from "vue";
 
 export default {
@@ -254,57 +248,80 @@ footer{
   margin: 0 0 0 4px;
 }
 
-@media only screen and (max-width: 768px) {
-    #top, .tablet{
-      display: none;
-   }
-
-   .phone{
-    background-image: url("../src/images/under-construction.jpg");
-    color: white;
-    width: 100vw;
+/* Tablet */
+@media (max-width: 1024px) {
+  body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-
-   .phoneWords{
-    width: 100vw;
-    color: black;
-    text-align: center;
-    background-color: gold;
-    padding: 40px;
-   }
+  }
+  img{
+    max-width: auto;
+    height: auto;
   }
 
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    #top, .phone{
-      display: none;
-   }
+  .introPt2{
+    font-size: 14px;
+    padding-bottom: 15%;
+  }
 
-   .tablet{
-    background-image: url("../src/images/under-construction.jpg");
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-
-   .tabletWords{
-    width: 100vw;
-    color: black;
-    text-align: center;
-    background-color: gold;
-    padding: 40px;
-   }
+  .thankYou{
+text-align: center;
 }
 
-  @media only screen and (min-width: 1025px){
-    .phone, .tablet{
-      display: none;
-    }
+.contactPage{
+  height: 100vh;
+}
+
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  body{
+    font-size: 16px;
   }
+
+   img{
+    max-width: auto;
+    height: auto;
+  }
+
+  .introPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .introName{
+    color: green;
+  }
+
+  .mobile-break{
+    display: inline;
+  }
+
+  .headshot1{
+    margin-bottom: 15px;
+  }
+
+  .introPt2{
+    font-size: 16px;
+  }
+
+  .contactPage{
+  height: 100%;
+  width: 100vw;
+}
+
+.connectMessage{
+  font-size: 16px;
+  width: 768px;
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+}
 
 </style>
