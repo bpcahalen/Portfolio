@@ -3,7 +3,17 @@
         <a :id="project.id"></a>
         <h4 class="projectName">{{project.title}}</h4>
         <div class="image-link">
-                    <img class="image" :src="project.source" />
+                    <video v-if="project.type === 'video'" class="image" autoplay muted loop playsinline >
+                        <source :src="project.source" type="video/mp4" /> 
+                    </video>
+
+                    <!-- IMAGE -->
+                    <img
+                        v-else
+                        class="image"
+                        :src="project.source"
+                        :alt="project.title"
+                    />
                 </div>
                 <div class="definition">
                     <p class="description">{{project.description}}</p>

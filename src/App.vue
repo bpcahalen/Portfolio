@@ -9,7 +9,7 @@
   <div id="top">
     <header>
       <div class="navigation">
-        <router-link to="/" class="name">Barrett Cahalen</router-link>
+        <a href="https://github.com/bpcahalen" target="_blank" class="name">Barrett Cahalen</a>
         <nav class="menu">
           <router-link to="/" class="routing">Home</router-link>
           <router-link to="/projects" class="routing">Projects</router-link>
@@ -34,7 +34,6 @@ import scrollButton from "../src/components/scrollButton.vue";
 
 <script>
 // import resume from "../public/Barrett_Cahalen_Resume.pdf";
-import { hydrateOnMediaQuery } from "vue";
 
 export default {
   data() {

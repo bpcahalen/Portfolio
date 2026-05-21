@@ -22,6 +22,7 @@ import project from '../components/ProjectComponent.vue';
 import image1 from '../images/playbillMemoryGame.png';
 import image2 from '../images/tenMo.png';
 import image3 from '../images/worldBytes.png';
+import image4 from '../images/isaPortfolioClip.mov';
 
 export default {
     components: {
@@ -32,6 +33,7 @@ export default {
             projects: [
                 {
                 title: "Memory Game",
+                type: "image",
                 source: image1,
                 description: "This interactive memory card game is a fun and challenging application built using HTML, CSS, and JavaScript, incorporating Fetch API and the Fisher-Yates shuffling method for randomness. The game is designed to test and improve players memory skills while offering an engaging user experience.", 
                 data1: "Dynamic Gameplay Mechanics:",
@@ -51,8 +53,31 @@ export default {
                 htmlUrl: "https://playbillmemory.netlify.app",
                 id: 1 
                 },
+                // {
+                // title: "Dancer Profile",
+                // type: "video",
+                // source: image4,
+                // description: "This dancers portfolio shows ", 
+                // data1: "Dynamic Gameplay Mechanics:",
+                // data2: "Players match pairs of cards to clear the board.",
+                // data3: "Cards lock in place when matched, ensuring no accidental re-selection.",
+                // data4: "Score Tracking & Randomized Shuffling:",
+                // data5: "Keeps track of matches and attempts, allowing players to monitor their progress.",
+                // data6: "The Fisher-Yates algorithm ensures cards are shuffled randomly each time the game resets, providing a fresh challenge every round.",
+                // data7: "Challenge Mode:",
+                // data8: "A unique Extra Hard Mode adds an extra layer of difficulty.",
+                // data9: "If a player matches a pair within the specified number of attempts, the game resets the attempt counter to zero to allow for further guessing.",
+                // data10: "Design Highlights:",
+                // data11: "Clean and intuitive UI with responsive styling for different screen sizes.",
+                // data12: "Clear visual feedback for card matches and mismatches.",
+                // demonstrates: "This project showcases strong JavaScript programming, creative problem-solving, and front-end development skills. It demonstrates proficiency in game logic design, user experience optimization, and efficient use of APIs for interactive features.",
+                // find: "Find it here: ",
+                // htmlUrl: "https://github.com/bpcahalen/IsaRamirezWebsite",
+                // id: 4 
+                // },
                 {
                 title: "TenMo Money Transfer System",
+                type: "image",
                 source: image2,
                 description: "This project is a Venmo-like command-line application co-developed using SQL, JDBC Framework, HTTP Protocol, and RESTful APIs. It provides a seamless backend solution for managing peer-to-peer financial transactions with essential features for user registration, secure authentication, and transaction tracking.", 
                 data1: "User Management:",
@@ -74,6 +99,7 @@ export default {
                 },
                 {
                 title: "WorldBytes: Meal Planning Site",
+                type: "image",
                 source: image3,
                 description: "This collaborative full-stack application was developed by a team of four, leveraging a robust tech stack including Java, JDBC, SQL, PostgreSQL, RESTful API design, Axios, and Vue.js. The project provides an intuitive meal-planning solution that integrates external APIs and features a dynamic user interface for an enhanced user experience.", 
                 data1: "User Authentication:",
